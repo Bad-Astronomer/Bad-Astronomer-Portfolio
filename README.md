@@ -8,6 +8,7 @@ Navbar / Header
 About section  
 Comment https://marchantweb.com/portfolio  
 Add github stats similar to github readme  
+Astro huston mascot  
 
 
 Inspiration:  
