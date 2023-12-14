@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 
 :root {
@@ -16,6 +17,8 @@
   --cross-size: 21px;
   --border-color: hsla( 0,0%,12% ,1);
   --cross-color: hsla( 0,0%,53% ,1);
+
+  --subtitle-color: rgb(140, 140, 140);
 }
 
 body {
@@ -33,14 +36,29 @@ body {
 
 h1{
   margin: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 #app {
   margin: 0 auto;
   padding: 0;
-  width: var(--width);
+  width: var(--width);  
   min-height: 100vh;
 }
+
+/* scroll-bar starts here */
+body::-webkit-scrollbar{
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+  background: var(--border-color);
+}
+
+body::-webkit-scrollbar-thumb{
+  background: hsla( 0,0%,25% ,1);;
+}
+/* scroll-bar ends here */
 
 
 /* Cross */
@@ -84,6 +102,75 @@ section{
   border-right: 1px solid var(--border-color);
 }
 
+/* Hero */
 #hero{
   margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  height: fit-content;
 }
+#hero-header{
+  font-size: 2em;
+}
+.hero-content{
+  /* background-color: red; */
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-img{
+  /* width: clamp(200px, 40vh, 300px); */
+  width: 350px;
+  filter: saturate(0.95) opacity(0.95);
+  transition: all 200ms ease-in;
+  border-radius: 12px;
+}
+#hero-img:hover{
+  filter: saturate(1) opacity(1);
+}
+/* Hero */
+
+/* About */
+.about-head{
+  margin-top: 20px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+  /* color: var(--subtitle-color); */
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.about-head img{
+  height: 1.12em;
+  filter: saturate(0);
+}
+
+.about-head-content{
+  font-size: 1em;
+  flex: 1;
+}
+.window-icon{
+  height: 60%;
+  /* width: 16px; */
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+
+.about-content{
+  height: 100%;
+  background-color: rgb(10, 10, 10);
+  padding: 20px 30px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 12px 12px;
+  color: var(--subtitle-color);
+  line-height: 1.5;
+}
+
+/* About */
