@@ -27,22 +27,6 @@ sections.forEach((section) => {
 })
 
 
-// Global Helper Functions
-
-function avg(arr){
-  const sum = arr.reduce((acc, curr) => acc + curr, 0);
-  return sum / arr.length;
-}
-
-
-// Header title
-// const titles = [
-//   "{ COMPUTER ENGINEER }",
-//   "{ ML / DL ENGINEER }",
-//   "{ FRONTEND ENGINEER }",
-//   "{ UI / UX DESIGNER }"
-// ]
-
 const titles = [
   {
     tag: "{ COMPUTER ENGINEER }",
@@ -76,8 +60,6 @@ let titleIndex = 0;
 let currentTitle = heroTitle.querySelector("span");
 currentTitle.style.color = titles[0].color;
 
-//! TEMP
-const animationTime = 120;
 
 setInterval(() => {
   titleIndex = (titleIndex + 1) % titles.length;

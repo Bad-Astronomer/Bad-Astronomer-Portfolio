@@ -13,12 +13,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Chakra Petch', sans-serif;
 
   --cross-size: 21px;
   --border-color: hsla( 0,0%,12% ,1);
   --cross-color: hsla( 0,0%,53% ,1);
 
   --subtitle-color: rgb(140, 140, 140);
+
+  --header-color: rgb(233, 233, 233);
+  --tech-grid-rows: 2;
+  --tech-grid-columns: 6;
 }
 
 body {
@@ -27,11 +32,9 @@ body {
   display: flex;
   place-items: center;
   box-sizing: border-box;
+
   /* min-width: 320px;
   min-height: 100vh; */
-}
-*{
-  font-family: 'Chakra Petch', sans-serif;
 }
 
 h1{
@@ -41,8 +44,11 @@ h1{
 #app {
   margin: 0 auto;
   padding: 0;
-  width: var(--width);  
+  width: var(--width); 
+  min-width: 1080px; 
+
   min-height: 100vh;
+  position: relative;
 }
 
 /* scroll-bar starts here */
@@ -189,7 +195,6 @@ section{
   border-radius: 50%;
 }
 
-
 .about-content{
   height: 100%;
   background-color: rgb(10, 10, 10);
@@ -218,3 +223,100 @@ section{
   color: rgb(81, 136, 66);
 }
 /* About */
+
+/* Edu and Exp */
+#edu-and-exp{
+  
+}
+/* Edu and Exp */
+
+/* Tech Stack */
+#tech{
+  position: relative;
+  height: calc(var(--width) / var(--tech-grid-columns) * var(--tech-grid-rows));
+  width: 100%;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: repeat(var(--tech-grid-rows), 1fr);
+  grid-template-columns: repeat(var(--tech-grid-columns), 1fr);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+#tech-header{
+  grid-area: span 1 / span 2;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+
+  color: var(--header-color);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 800;
+  padding-left: 12.5%;
+
+}
+#tech-header p {
+  margin: 0;
+}
+
+#tech-header-container{
+  height: clamp(1.25rem, 2vw, 2rem);
+}
+.tech-header-span{
+  position: absolute;
+}
+
+.tech-header-span-down{
+  transform-origin: bottom;
+}
+.tech-header-span-up{
+  transform-origin: top;
+}
+
+
+.tech-icon{
+  box-sizing: border-box;
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  grid-area: span 1 / span 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tech-img{
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  pointer-events: none;
+}
+
+.tech-redirect-container{
+  grid-area: -1/-1/-2/-2;
+}
+.tech-redirect{
+  position: relative;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--border-color);
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.tech-redirect:hover{
+  background-color: var(--border-color);
+}
+.tech-redirect p{
+  scale: 1.5 2;
+  translate: 63% -15%;
+  pointer-events: none;
+}
+/* Tech Stack */
