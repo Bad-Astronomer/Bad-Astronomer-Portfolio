@@ -109,7 +109,7 @@ section{
 }
 
 #hero{
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   gap: 40px;
   position: relative;
@@ -153,6 +153,7 @@ section{
   filter: saturate(0.95) opacity(0.95);
   transition: all 200ms ease-in;
   border-radius: 12px;
+  border: 1px solid var(--border-color);
 }
 #hero-img:hover{
   filter: saturate(1) opacity(1);
@@ -199,4 +200,21 @@ section{
   line-height: 1.5;
 }
 
+.about-content-line{
+  padding-left: 1.5em;
+  position: relative;
+  transition: filter 200ms ease-in;
+  text-align: right;
+}
+.about-content-line::before{
+  content: attr(index);
+  width: 2em;
+  position: absolute;
+  translate: -3em 0;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.78)
+}
+.about-code-comment{
+  color: rgb(81, 136, 66);
+}
 /* About */

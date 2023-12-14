@@ -46,19 +46,19 @@ function avg(arr){
 const titles = [
   {
     tag: "{ COMPUTER ENGINEER }",
-    color: "#ff5f5a"
+    color: "#08b59e"
   },
   {
     tag: "{ ML / DL ENGINEER }",
-    color: "#2aca44"
+    color: "#52A8FF"
   },
   {
-    tag: "{ FRONTEND ENGINEER }",
-    color: "#C147E9"
+    tag: "{ FRONTEND DEVELOPER }",
+    color: "#03C988"
   },
   {
     tag: "{ UI / UX DESIGNER }",
-    color: "#ffbe2e"
+    color: "#B6EADA"
   },
 ]
 
@@ -72,7 +72,7 @@ function createTitle(text){
   return tempTitle;
 }
 
-let i = 0;
+let titleIndex = 0;
 let currentTitle = heroTitle.querySelector("span");
 currentTitle.style.color = titles[0].color;
 
@@ -80,8 +80,8 @@ currentTitle.style.color = titles[0].color;
 const animationTime = 120;
 
 setInterval(() => {
-  i = (i + 1) % titles.length;
-  let text = titles[i];
+  titleIndex = (titleIndex + 1) % titles.length;
+  let text = titles[titleIndex];
 
   let tempTitle = createTitle(text.tag);
   heroTitle.appendChild(tempTitle);
@@ -106,3 +106,13 @@ setInterval(() => {
       currentTitle = tempTitle;
   }, animationTime);
 }, 4000);
+
+
+// About content
+
+const aboutCode = document.getElementsByClassName("about-code");
+let indent = "&emsp;&emsp;&emsp;&emsp;&emsp;";
+for(let i = 0; i < aboutCode.length; i++){
+  aboutCode[i].style.color = titles[i].color;
+  aboutCode[i].innerHTML = `${indent}${aboutCode[i].innerHTML}`;
+}
