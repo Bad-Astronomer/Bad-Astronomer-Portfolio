@@ -3,7 +3,8 @@
 
 
 :root {
-  --width: clamp(640px * 0.9, 90vw, 1080px);
+  /*--width: clamp(640px * 0.9, 90vw, 1080px) */
+  --width: 1080px;
 
   color: rgba(255, 255, 255, 0.9);
   background-color: #000000;
@@ -39,6 +40,8 @@ body {
 
 h1{
   margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
 }
 
 #app {
@@ -122,9 +125,7 @@ section{
   height: fit-content;
 }
 #hero-header{
-  font-size: 2.5em;
   line-height: 1.2;
-  font-family: 'Oswald', sans-serif;
 }
 #hero-subtitle{
   font-size: 1.2em;
@@ -226,7 +227,22 @@ section{
 
 /* Edu and Exp */
 #edu-and-exp{
-  
+  padding: 0;
+  height: 400px;
+  display: flex;
+}
+#education{
+  margin: 24px 40px;
+  flex: 1;
+}
+#experience{
+  padding: 24px 40px;
+  flex: 1;
+}
+.vertical-divider{
+  background-color: var(--border-color);
+  width: 1px;
+  height: 100%;
 }
 /* Edu and Exp */
 
@@ -255,7 +271,7 @@ section{
   justify-content: center;
   flex-direction: column;
 
-  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-size: clamp(1.75rem, 2vw, 2rem);
   font-weight: 800;
   padding-left: 12.5%;
 
@@ -265,7 +281,7 @@ section{
 }
 
 #tech-header-container{
-  height: clamp(1.25rem, 2vw, 2rem);
+  height: clamp(1.75rem, 2vw, 2rem);
 }
 .tech-header-span{
   position: absolute;
