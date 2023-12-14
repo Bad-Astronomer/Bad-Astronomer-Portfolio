@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+
+:root {
+  --width: clamp(640px * 0.9, 90vw, 1080px);
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --cross-size: 21px;
+  --border-color: hsla( 0,0%,12% ,1);
+  --cross-color: hsla( 0,0%,53% ,1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+  /* min-width: 320px;
+  min-height: 100vh; */
+}
+*{
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+h1{
+  margin: 0;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  width: var(--width);
+  min-height: 100vh;
+}
+
+
+/* Cross */
+.cross{
+  height: var(--cross-size);
+  width: var(--cross-size);
+  position: absolute;
+  translate: -50% -50%;
+}
+.cross-top{
+  inset: 0 0;
+}
+.cross-bottom{
+  inset: 100% 100%;
+}
+.cross-half-vertical{
+  position: absolute;
+  height: var(--cross-size);
+  width: calc(var(--cross-size) / 2);
+  border-right: 1px solid var(--cross-color);
+}
+.cross-half-horizontal{
+  position: absolute;
+  height: calc(var(--cross-size) / 2);
+  width: var(--cross-size);
+  border-bottom: 1px solid var(--cross-color);
+}
+/* Cross */
+
+/* Section */
+section{
+  border: 1px solid var(--border-color);
+  position: relative;
+  padding: 40px;
+}
+/* Section */
+
+.gap{
+  height: calc(var(--cross-size));
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+#hero{
+  margin-top: 40px;
+}
