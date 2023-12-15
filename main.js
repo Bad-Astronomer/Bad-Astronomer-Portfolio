@@ -109,3 +109,8 @@ function addI(element){
   element.appendChild(editorPointer);
 }
 addI(aboutCode[0]);
+
+
+// Education and Experience
+
+// Education and Experience
