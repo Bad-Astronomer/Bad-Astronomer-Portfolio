@@ -21,6 +21,7 @@
   --cross-color: hsla( 0,0%,53% ,1);
 
   --subtitle-color: rgb(140, 140, 140);
+  --highlight-color: rgb(3, 201, 136);
 
   --header-color: rgb(233, 233, 233);
   --tech-grid-rows: 2;
@@ -267,7 +268,8 @@ section{
   opacity: 0;
 }
 .edu-and-exp-container:hover > .edu-and-exp-content{
-  color: rgba(255, 255, 255, 0.6);
+  /* color: rgba(255, 255, 255, 0.6); */
+  opacity: 1;
 }
 
 #education{
@@ -283,7 +285,8 @@ section{
   margin: 20px 0;
   padding-right: 40px;
   color: var(--subtitle-color);
-  transition: color 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  opacity: 0.8;
 }
 .edu-and-exp-content::-webkit-scrollbar{
   width: 0.4rem;
@@ -308,6 +311,15 @@ section{
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.subtitle-bold{
+  font-size: 1.12em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.highlight{
+  color: var(--highlight-color);
 }
 /* Edu and Exp */
 
