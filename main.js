@@ -110,7 +110,14 @@ function addI(element){
 }
 addI(aboutCode[0]);
 
-
-// Education and Experience
-
-// Education and Experience
+// Bottom Vignette
+const bottomVignette = document.getElementById("bottom-vignette");
+window.addEventListener("scroll", (event)=>{
+  if(this.scrollY >= 80){
+    bottomVignette.style.opacity = 0.2;
+  }
+  else{
+    bottomVignette.style.opacity = 1;
+  }
+});
+// Bottom Vignette

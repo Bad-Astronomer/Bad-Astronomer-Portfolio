@@ -1,5 +1,5 @@
 // Tech Header config
-const defaultHeader = "&lt;<span style = 'color: red'> / </span>&gt;";
+const defaultHeader = "&lt;<span style = 'color: rgb(240, 77, 28)'> / </span>&gt;";
 const animationTime = 120;
 
 // Tech Stack config
