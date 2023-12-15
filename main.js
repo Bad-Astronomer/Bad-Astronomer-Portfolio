@@ -76,7 +76,8 @@ setInterval(() => {
   setTimeout(() => {
     tempTitle.style.transform = "scaleY(1)";
     tempTitle.style.opacity = 1;
-  }, 1);
+    addI(aboutCode[titleIndex]);
+  }, 10);
 
   currentTitle.style.transition = `transform ${animationTime}ms linear, opacity ${animationTime}ms ease-in`;
   currentTitle.style.transformOrigin = "bottom";
@@ -98,3 +99,13 @@ for(let i = 0; i < aboutCode.length; i++){
   aboutCode[i].style.color = titles[i].color;
   aboutCode[i].innerHTML = `${indent}${aboutCode[i].innerHTML}`;
 }
+
+let editorPointer = document.createElement("span");
+editorPointer.classList.add("editor-pointer");
+editorPointer.innerHTML = "&nbsp;|";
+
+function addI(element){
+  editorPointer.remove();
+  element.appendChild(editorPointer);
+}
+addI(aboutCode[0]);

@@ -148,7 +148,7 @@ function animateTechHeader(tech){
     setTimeout(() => {
         tempHeader.style.transform = "scaleY(1)";
         tempHeader.style.opacity = 1;
-    }, 1);
+    }, 10);
 
     currentTechHeader.style.transition = `transform ${animationTime}ms linear, opacity ${animationTime}ms ease-in`;
     currentTechHeader.style.transformOrigin = "bottom";

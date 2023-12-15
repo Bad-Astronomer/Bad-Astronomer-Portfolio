@@ -204,6 +204,7 @@ section{
   border-radius: 0 0 12px 12px;
   color: var(--subtitle-color);
   line-height: 1.5;
+  position: relative;
 }
 
 .about-content-line{
@@ -222,6 +223,27 @@ section{
 }
 .about-code-comment{
   color: rgb(81, 136, 66);
+}
+
+.editor-pointer{
+  color: rgba(255, 255, 255, 0.87);
+  transition: all 0s linear;
+  animation: editor-pointer-animation 1s infinite linear;
+}
+
+@keyframes editor-pointer-animation {
+  0%{
+    opacity: 1;
+  }
+  49%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  99%{
+    opacity: 0;
+  }
 }
 /* About */
 
