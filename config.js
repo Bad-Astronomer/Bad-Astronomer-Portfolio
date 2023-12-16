@@ -132,3 +132,5 @@ const tech_stack = {
         image: new Image(),
     },
 }
+
+export {titles, defaultHeader, animationTime, tech_stack};

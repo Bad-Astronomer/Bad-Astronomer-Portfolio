@@ -1,3 +1,5 @@
+import { titles, animationTime } from "./config";
+
 // corner cross template
 
 function createCross(position, element){
