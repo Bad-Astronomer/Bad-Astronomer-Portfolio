@@ -1,3 +1,5 @@
+import { tech_stack, animationTime, defaultHeader } from "./config";
+
 // Global Helper Functions
 
 function avg(arr){
