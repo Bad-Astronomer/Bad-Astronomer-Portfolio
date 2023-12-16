@@ -27,25 +27,6 @@ sections.forEach((section) => {
 })
 
 
-const titles = [
-  {
-    tag: "{ COMPUTER ENGINEER }",
-    color: "#08b59e"
-  },
-  {
-    tag: "{ ML / DL ENGINEER }",
-    color: "#52A8FF"
-  },
-  {
-    tag: "{ FRONTEND DEVELOPER }",
-    color: "#03C988"
-  },
-  {
-    tag: "{ UI / UX DESIGNER }",
-    color: "#B6EADA"
-  },
-]
-
 const heroTitle = document.getElementById("hero-subtitle");
 
 function createTitle(text){
@@ -59,11 +40,14 @@ function createTitle(text){
 let titleIndex = 0;
 let currentTitle = heroTitle.querySelector("span");
 currentTitle.style.color = titles[0].color;
+document.querySelector(":root").style.setProperty("--highlight-color", titles[0].color);
 
 
 setInterval(() => {
   titleIndex = (titleIndex + 1) % titles.length;
   let text = titles[titleIndex];
+  
+  document.querySelector(":root").style.setProperty("--highlight-color", titles[(titleIndex + 1) % titles.length].color);
 
   let tempTitle = createTitle(text.tag);
   heroTitle.appendChild(tempTitle);
@@ -121,3 +105,26 @@ window.addEventListener("scroll", (event)=>{
   }
 });
 // Bottom Vignette
+
+
+// Projects
+
+// Animate on scroll
+const projects = document.getElementsByClassName("project-container");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      if(entry.isIntersecting){
+          entry.target.classList.add("show");
+      }
+      else{
+          entry.target.classList.remove("show");
+      }
+  }
+  )
+})
+
+for (projectEntry of projects){
+  observer.observe(projectEntry);
+}
+// Projects

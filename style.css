@@ -33,6 +33,10 @@
   color: black;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -292,7 +296,7 @@ section{
   padding-right: 40px;
   color: var(--subtitle-color);
   transition: opacity 200ms ease-in;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .edu-and-exp-content::-webkit-scrollbar{
   width: 0.4rem;
@@ -320,12 +324,16 @@ section{
 }
 
 .subtitle-bold{
+  color: rgba(255, 255, 255, 0.9);
+}
+.subtitle-bolder{
   font-size: 1.12em;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .highlight{
   color: var(--highlight-color);
+  transition: color 4000ms ease-in;
 }
 /* Edu and Exp */
 
@@ -435,10 +443,14 @@ section{
 /* Bottom-Vignette */
 
 /* Project */
+#projects{
+  padding: 0 40px;
+}
 .project-container{
   display: flex;
-  margin: 40px;
-  gap: 40px;
+  margin: 80px 40px;
+  gap: 80px;
+  opacity: 0;
 }
 
 
@@ -447,13 +459,15 @@ section{
   width: fit-content;
   position: relative;
   cursor: pointer;
+  height: 100%;
 }
 .project-folder:hover > .project-folder-img{
-  filter: contrast(0.97);
+  filter: blur(0) saturate(1);
 }
 .project-folder-img{
   width: 300px;
-  transition: filter 200ms ease-in;
+  filter: blur(0.5px) saturate(0.3);
+  transition: all 200ms ease-in;
 }
 .project-folder-fold{
   width: 33px;
@@ -490,11 +504,17 @@ section{
 }
 
 .project-subtitle{
-  padding-left: 40px;
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   color: var(--subtitle-color);
+  font-weight: 1000;
+}
+
+.show{
+  opacity: 1;
+  transition: opacity 200ms ease-in 100ms;
 }
 
 /* Project */

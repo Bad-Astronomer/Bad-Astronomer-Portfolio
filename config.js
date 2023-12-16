@@ -1,5 +1,25 @@
+// Header
+const titles = [
+    {
+        tag: "{ COMPUTER ENGINEER }",
+        color: "#52A8FF"
+    },
+    {
+        tag: "{ ML / DL ENGINEER }",
+        color: "#8CABFF"
+    },
+    {
+        tag: "{ FRONTEND DEVELOPER }",
+        color: "#08b59e"
+    },
+    {
+        tag: "{ UI / UX DESIGNER }",
+        color: "#03C988"
+    },
+]
+
 // Tech Header config
-const defaultHeader = "&lt;<span style = 'color: rgb(240, 77, 28)'> / </span>&gt;";
+const defaultHeader = "&lt;<span class='highlight'> / </span>&gt;";
 const animationTime = 120;
 
 // Tech Stack config
