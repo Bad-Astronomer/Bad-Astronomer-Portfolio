@@ -1,3 +1,13 @@
+import pythonURL from "./assets/pixel_python.png";
+import pytorchURL from "./assets/pixel_pytorch.png";
+import javascriptURL from "./assets/pixel_javascript.png";
+import threejsURL from "./assets/pixel_three.png";
+import cURL from "./assets/pixel_c.png";
+import cssURL from "./assets/pixel_css.png";
+import javaURL from "./assets/pixel_java.png";
+import reactURL from "./assets/pixel_reactjs.png";
+import typescriptURL from "./assets/pixel_ts.png";
+
 // Header
 const titles = [
     {
@@ -26,7 +36,7 @@ const animationTime = 120;
 const tech_stack = {
     tech_python: {
         tag: "Python",
-        url: './assets/pixel_python.png',
+        url: pythonURL,
         filter: "brightness(1.2)",
         color: "rgb(18, 159, 201)",
         noise: 0.1,
@@ -38,7 +48,7 @@ const tech_stack = {
     
     tech_js: {
         tag: "Javascript",
-        url: './assets/pixel_javascript.png',
+        url: javascriptURL,
         filter: "brightness(1.2) contrast(1.1)",
         color: "rgb(196, 178, 16)",
         noise: 0.08,
@@ -50,7 +60,7 @@ const tech_stack = {
     
     tech_css: {
         tag: "CSS styling",
-        url: './assets/pixel_css.png',
+        url: cssURL,
         filter: "brightness(1.25) contrast(1.1)",
         color: "rgb(30, 131, 214)",
         noise: 0.08,
@@ -62,7 +72,7 @@ const tech_stack = {
     
     tech_react: {
         tag: "ReactJS",
-        url: './assets/pixel_reactjs.png',
+        url: reactURL,
         filter: "brightness(1) ",
         color: "rgb(30, 192, 214)",
         noise: 0.2,
@@ -74,7 +84,7 @@ const tech_stack = {
     
     tech_c: {
         tag: "C_programming",
-        url: './assets/pixel_c.png',
+        url: cURL,
         filter: "brightness(1.25)",
         color: "rgb(55, 63, 184)",
         noise: 0.08,
@@ -86,7 +96,7 @@ const tech_stack = {
     
     tech_pytorch: {
         tag: "PyTorch",
-        url: './assets/pixel_pytorch.png',
+        url: pytorchURL,
         filter: "brightness(1.25) contrast(1.25)",
         color: "rgb(240, 77, 28)",
         noise: 0.25,
@@ -98,7 +108,7 @@ const tech_stack = {
     
     tech_threejs: {
         tag: "ThreeJS",
-        url: './assets/pixel_three.png',
+        url: threejsURL,
         filter: "brightness(0.825) contrast(1.4)",
         color: "rgb(161, 161, 161)",
         noise: 0.2,
@@ -110,7 +120,7 @@ const tech_stack = {
     
     tech_java: {
         tag: "Java",
-        url: './assets/pixel_java.png',
+        url: javaURL,
         filter: "brightness(1.5) contrast(1.1)",
         color: "rgb(226, 137, 12)",
         noise: 0.2,
@@ -122,7 +132,7 @@ const tech_stack = {
     
     tech_ts : {
         tag: "Typescript",
-        url: './assets/pixel_ts.png',
+        url: typescriptURL,
         filter: "brightness(1.3) contrast(1.1)",
         color: "rgb(47, 117, 193)",
         noise: 0.08,
