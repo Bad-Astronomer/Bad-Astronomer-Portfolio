@@ -62,7 +62,6 @@ h1{
 
   min-height: 100vh;
   position: relative;
-  margin-bottom: 80px;
 }
 
 /* scroll-bar starts here */
@@ -87,10 +86,16 @@ body::-webkit-scrollbar-thumb{
   position: absolute;
   translate: -50% -50%;
 }
-.cross-top{
+.cross-top-left{
   inset: 0 0;
 }
-.cross-bottom{
+.cross-top-right{
+  inset: 100% 0;
+}
+.cross-bottom-left{
+  inset: 0 100%;
+}
+.cross-bottom-right{
   inset: 100% 100%;
 }
 .cross-half-vertical{
@@ -104,6 +109,12 @@ body::-webkit-scrollbar-thumb{
   height: calc(var(--cross-size) / 2);
   width: var(--cross-size);
   border-bottom: 1px solid var(--cross-color);
+}
+.cross-section{
+  position: relative;
+}
+.cross-section-reverse{
+  position: relative;
 }
 /* Cross */
 
@@ -444,17 +455,37 @@ section{
 
 /* Project */
 #projects{
-  padding: 0 40px;
+  padding: 0;
+  isolation: isolate;
 }
 .project-container{
   display: flex;
-  margin: 80px 40px;
+  padding: 40px 80px;
   gap: 80px;
   opacity: 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
 }
 
+.project-divider-right{
+  height: 100%;
+  width: 0px;
+  border-left: 1px solid var(--border-color);
+  translate: calc(var(--width) / var(--tech-grid-columns) * -2);
+  inset: 0 100%;
+  position: absolute;
+}
+.project-divider-left{
+  height: 100%;
+  width: 0px;
+  border-left: 1px solid var(--border-color);
+  inset: 0 0;
+  translate: calc(var(--width) / var(--tech-grid-columns) * 2);
+  position: absolute;
+}
 
 .project-folder{
+  z-index: 2;
   border: 1px solid var(--border-color);
   width: fit-content;
   position: relative;
@@ -519,3 +550,42 @@ section{
 }
 
 /* Project */
+
+/* Footer */
+#footer{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+.footer-btn-wrapper{
+  position: absolute;
+  display: flex;
+  translate: 0 -100%;
+  gap: 32px;
+}
+.footer-btn{
+  background-color: black;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  transition: translate 500ms ease-in;
+  cursor: pointer;
+}
+.footer-btn:hover{
+  translate: 0 -10%;
+  transition: translate 100ms ease-in;
+}
+.footer-btn img{
+  filter: invert(1);
+  width: 32px;
+  height: auto;
+}
+.contacts{
+  padding-top: 32px;
+  display: flex;
+  gap: 24px;
+  color: var(--subtitle-color);
+}
+
+/* Footer */

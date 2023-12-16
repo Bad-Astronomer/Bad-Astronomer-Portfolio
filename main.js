@@ -17,13 +17,19 @@ function createCross(position, element){
 }
 
 function cross(element){
-  createCross("top", element);
-  createCross("bottom", element);
+  createCross("top-left", element);
+  createCross("bottom-right", element);
+}
+function crossReverse(element){
+  createCross("top-right", element);
+  createCross("bottom-left", element);
 }
 
-const sections = document.querySelectorAll(".cross-section");
-sections.forEach((section) => {
+document.querySelectorAll(".cross-section").forEach((section) => {
   cross(section); // add cross to all sections
+})
+document.querySelectorAll(".cross-section-reverse").forEach((section) => {
+  crossReverse(section); // add cross to all sections
 })
 
 
@@ -123,8 +129,19 @@ const observer = new IntersectionObserver((entries) => {
   }
   )
 })
+for (let i = 0; i < projects.length; i++){
+  observer.observe(projects[i]);
+  let divider = document.createElement("div");
+  if(i%2){
+    divider.classList.add("project-divider-right");
+  }
+  else{
+    divider.classList.add("project-divider-left");
+  }
+  projects[i].appendChild(divider);
 
-for (projectEntry of projects){
-  observer.observe(projectEntry);
 }
+// remove bottom border from last project
+projects[projects.length - 1].style.borderBottom = "none";
+
 // Projects
