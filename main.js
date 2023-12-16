@@ -105,7 +105,7 @@ addI(aboutCode[0]);
 // Bottom Vignette
 const bottomVignette = document.getElementById("bottom-vignette");
 window.addEventListener("scroll", (event)=>{
-  if(this.scrollY >= 80){
+  if(window.scrollY >= 80){
     bottomVignette.style.opacity = 0.2;
   }
   else{

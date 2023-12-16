@@ -164,7 +164,7 @@ function animateTechHeader(tech){
 }
 
 function deanimateTechHeader(){
-    tech = {
+    let tech = {
         tag: defaultHeader,
         color: "white",
     }
