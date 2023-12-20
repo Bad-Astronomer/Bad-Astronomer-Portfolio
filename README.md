@@ -1,4 +1,4 @@
-# portfolio-1-pvt
+# Bad Astronomer's Portfolio
 
 Less flashy website repo  
 
