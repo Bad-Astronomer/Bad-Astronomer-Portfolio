@@ -1,4 +1,4 @@
-import { titles, animationTime } from "./config";
+import { titles, animationTime, resumeURL } from "./config";
 
 // corner cross template
 
@@ -147,3 +147,10 @@ for (let i = 0; i < projects.length; i++){
 projects[projects.length - 1].style.borderBottom = "none";
 
 // Projects
+
+
+// Footer
+document.getElementById("resume-btn").addEventListener("click", () => {
+  window.location.href = resumeURL;
+})
+// Footer
