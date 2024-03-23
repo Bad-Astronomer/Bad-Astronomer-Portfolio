@@ -10,7 +10,7 @@ import reactURL from "./assets/pixel_reactjs.png";
 import typescriptURL from "./assets/pixel_ts.png";
 
 // Resume import
-import resumeURL from './assets/Resume_Kedar_Sem5.pdf';
+import resumeURL from './assets/resume.pdf';
 
 // Header
 const titles = [
